@@ -6,7 +6,7 @@ public class LeftRotateArray {
         for(int k=0; k<d; k++){
             int first=num[0];
             for(int i=0; i<num.length-1; i++){
-                num[i]=num[(i+1)];
+                num[i]=num[i+1];
             }
             num[num.length-1]=first;
         }
