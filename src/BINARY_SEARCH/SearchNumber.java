@@ -18,7 +18,7 @@ public class SearchNumber {
                 high=mid-1;
             }
         }
-        return low;
+        return -1;
     }
     public static void main(String[] args) {
         int numbers[]={2,3,4,5,6,7,8,9};
