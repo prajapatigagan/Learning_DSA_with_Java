@@ -12,8 +12,9 @@ public class PrintSubArray {
                    
                     System.out.print(arr[k]+" "); 
                 }
-                System.out.println();  
                 ts++;
+                System.out.println();  
+                
             }
             System.out.println();
         }
@@ -32,9 +33,8 @@ public class PrintSubArray {
                     ts+=arr[k];
                    
                 }
-                 
                 System.out.println();
-                
+               
             }
             System.out.print("Sum:"+ts);
             System.out.println();
