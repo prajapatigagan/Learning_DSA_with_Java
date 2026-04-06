@@ -9,7 +9,7 @@ public class ArrayFunctionArgument{
         Update(marks);
 
         for(int i=0; i<marks.length; i++){
-            System.out.println(marks[i]);
+            System.out.println("Increased marks: "+marks[i]);
         }
 
     }

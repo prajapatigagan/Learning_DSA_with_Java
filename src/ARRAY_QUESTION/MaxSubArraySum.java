@@ -1,6 +1,8 @@
 package ARRAY_QUESTION;
 
 public class MaxSubArraySum {
+
+    //maximum subarray sum...
     public static void MaxsubArray(int arr[]){
         int currentSum=0;
         int maxSum=Integer.MIN_VALUE;
@@ -26,6 +28,8 @@ public class MaxSubArraySum {
         }
         System.out.println("Maximum sum: " + maxSum);
     }
+
+    //minimum sub Array sum....
     public static void minsubArray(int arr[]){
         int currentSum=0;
         int minSum=Integer.MAX_VALUE;
