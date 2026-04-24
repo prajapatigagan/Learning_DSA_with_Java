@@ -1,33 +1,36 @@
 package Sorting;
 
-public class Insertionsort {
+public class SelectionSort {
     public static void AscendingOrder(int[] arr){
-        for(int i=0; i<arr.length; i++){
-            int minpos=i;
+
+        for(int i=0; i<arr.length-1;i++){
+            int smallest=i;
             for(int j=i+1; j<arr.length; j++){
-                if(arr[minpos]>arr[j]){
-                    minpos=j;
+                if(arr[smallest]>arr[j]){
+                    smallest=j;
                 }
-            }         
-            int temp=arr[minpos];
-            arr[minpos]=arr[i];
+            }
+            int temp=arr[smallest];
+            arr[smallest]=arr[i];
             arr[i]=temp;
         }
+
     }
     public static void DescendingOrder(int[] arr){
-        for(int i=0; i<arr.length; i++){
-            int minpos=i;
+
+        for(int i=0; i<arr.length-1;i++){
+            int largest=i;
             for(int j=i+1; j<arr.length; j++){
-                if(arr[minpos]<arr[j]){
-                    minpos=j;
+                if(arr[largest]<arr[j]){
+                    largest=j;
                 }
-            }         
-            int temp=arr[minpos];
-            arr[minpos]=arr[i];
+            }
+            int temp=arr[largest];
+            arr[largest]=arr[i];
             arr[i]=temp;
         }
-    }
 
+    }
     public static void printarr(int[] arr) {
         for(int i=0; i<arr.length; i++){
             System.out.print(arr[i]+" ");
