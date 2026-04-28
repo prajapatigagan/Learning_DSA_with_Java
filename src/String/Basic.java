@@ -1,6 +1,12 @@
 package String;
 
 public class Basic {
+    public static void printletter(String str){
+        for(int i=0; i<str.length();i++){
+            System.out.print(str.charAt(i)+" ");
+        }
+        System.out.println();
+    }
     public static void main(String[] args) {
         // char arr[]={'a','b','c','d','e'};
         // String str="abcd";
@@ -21,6 +27,10 @@ public class Basic {
         String firstname="Gagan";
         String lastname="Prajapati";
         String fullnamee=firstname +" "+ lastname;
-        System.out.println(fullnamee);
+        // System.out.println(fullnamee);
+        // System.out.println(fullnamee.charAt(0));
+
+        
+        printletter(fullname);
     }
 }
