@@ -12,6 +12,5 @@ public class substring {
         String str="HelloWorld";
         // string(str,0,7);
         System.out.println(str.substring(3,5));
-    }
-    
+    }   
 }
