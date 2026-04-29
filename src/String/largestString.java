@@ -10,6 +10,5 @@ public class largestString {
             }
         }
         System.out.println(largest);
-    }
-    
+    } 
 }
