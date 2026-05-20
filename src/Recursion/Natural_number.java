@@ -1,14 +1,12 @@
 package Recursion;
 
-public class fectorial_number {
+public class Natural_number {
     public static int number(int n){
-        if(n==0){ 
+        if(n==1){
             return 1;
         }
-        // int fect=number(n-1);
-        // int fn=n*number(n-1);
-        int fn=n*number(n-1);
-        return fn;
+        int fun=n+number(n-1);
+        return fun;
     }
     public static void main(String[] args) {
         int n=6;
