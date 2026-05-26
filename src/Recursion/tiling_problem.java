@@ -5,10 +5,11 @@ public class tiling_problem {
         if(n==0||n==1){
             return 1;
         }
-        int nm1=tiling_nm(n-1);
-        int nm2=tiling_nm(n-2);
-        int to_word= nm1+nm2;
-        return to_word;
+        // int nm1=tiling_nm(n-1);
+        // int nm2=tiling_nm(n-2);
+        // int to_word= nm1+nm2;
+        // return to_word;
+        return tiling_nm(n-1)+tiling_nm(n-2);
     }
     public static void main(String[] args) {
         System.out.println(tiling_nm(3));
