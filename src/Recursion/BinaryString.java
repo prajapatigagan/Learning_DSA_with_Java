@@ -6,13 +6,6 @@ public class BinaryString {
             System.out.println(str);
             return;
         }
-       
-        // if(lastplace==0){   
-        //      Binarystring(n-1, 0, str.append("0"));
-        //     Binarystring(n-1, 1, str.append("1"));
-        // }else{
-        //      Binarystring(n-1, 0, str.append("0"));
-        // }
         
            Binarystring(n-1, 0, str+"0");
         if(lastplace==0){     

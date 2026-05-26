@@ -10,10 +10,10 @@ public class RemoveDuplicate {
          System.out.println(var2);
       } else {
          char var4 = var0.charAt(var1);
-         if (var3[var4 - 97]) {
+         if (var3[var4 -'a']) {
             RemoveDuplicateString(var0, var1 + 1, var2, var3);
          } else {
-            var3[var4 - 97] = true;
+            var3[var4 - 'a'] = true;
             RemoveDuplicateString(var0, var1 + 1, var2.append(var4), var3);
          }
 
