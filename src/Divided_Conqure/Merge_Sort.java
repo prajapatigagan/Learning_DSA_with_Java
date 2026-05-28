@@ -7,6 +7,7 @@ public class Merge_Sort {
         int i=start;
         int j=mid+1;
         int k=0;
+        // Compare and store smaller element
         while (i<=mid&&j<=end) { 
             if(arr[i]<=arr[j]){
             temp[k] = arr[i];
@@ -19,27 +20,33 @@ public class Merge_Sort {
             }
             k++;
         }
+         // Remaining left elements
         while(i<=mid){
              temp[k] = arr[i];
                 i++;
         }
+         // Remaining right elements
         while(j<=end){
              temp[k] = arr[j];
                 j++;
         }
-        
+        // Copy temp to original array
         for (int idx = 0; idx < temp.length; idx++) {
             arr[idx+start]=temp[idx];
             
         }
 
     }
+    // Merge Sort Function
     public static void merge_sort(int arr[],int start,int end){
        if(start<end)
         {
          int mid=start+(end-start)/2;
+          // Left part
         merge_sort(arr, start,mid);
+        //right part
         merge_sort(arr, mid+1, end);
+        // Merge both parts
         merge(arr, start, end, mid);
        }
     }
