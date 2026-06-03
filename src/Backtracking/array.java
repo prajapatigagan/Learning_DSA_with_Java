@@ -1,6 +1,7 @@
 package Backtracking;
 
 public class array {
+    // basic backtraking....... 
     public static void changearr(int arr[],int i,int val){
         if(i==arr.length){
             printarr(arr);
