@@ -7,7 +7,7 @@ public class hashset {
         //creation
         HashSet<Integer> set=new HashSet<>();
 
-        //Instert
+        //Insert
         set.add(1);
         set.add(2);
         set.add(3);
