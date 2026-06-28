@@ -3,6 +3,9 @@ import java.util.HashSet;
 import java.util.Iterator;
 
 public class hashset {
+
+    public hashset() {
+    }
     public static void main(String[] args) {
         //creation
         HashSet<Integer> set=new HashSet<>();
