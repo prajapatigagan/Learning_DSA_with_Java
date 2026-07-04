@@ -13,30 +13,28 @@ public class BasicOperation {
         System.out.println(list);
 
         //size.
-        // System.out.println(list.size());
+        System.out.println(list.size());
 
         //reverse
         for(int i=list.size()-1;i>=0;i--){
             System.out.print(list.get(i));
         }
 
-        // //Get Element
-        // System.out.println(list.get(2));
+        //Get Element
+        System.out.println(list.get(2));
 
-        // //remove Element
-        // list.remove(3);
-        // System.out.println(list);
+        //remove Element
+        list.remove(3);
+        System.out.println(list);
 
-        // //Set Element at Index
-        // list.set(3, 6);
-        // System.out.println(list);
+        //Set Element at Index
+        list.set(3, 6);
+        System.out.println(list);
 
-        //Contains Element
-        // System.out.println(list.contains(1));
-        // System.out.println(list.contains(11));
+        // Contains Element
+        System.out.println(list.contains(1));
+        System.out.println(list.contains(11));
     }
 
-    private static boolean list(int i) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
+
 }
