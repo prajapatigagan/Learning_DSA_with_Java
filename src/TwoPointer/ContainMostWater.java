@@ -1,21 +1,27 @@
-package ArrayList;
+package TwoPointer;
 
 import java.util.ArrayList;
 
 public class ContainMostWater {
     public static int storewater(ArrayList<Integer> height){
+        int n=height.size();
         int maxwater=0;
-          for(int i=0;i<height.size();i++){
-            for(int j=i+1;j<height.size();j++){
-                int ht=Math.min(height.get(i), height.get(j));
-                int width=j-i;
-                int currwater=ht*width;
-                maxwater=Math.max(maxwater, currwater);
+        int LP=0;
+        int RP=n-1;
+        while(LP<RP){
+            int ht=Math.min(height.get(LP),height.get(RP));
+            int width=RP-LP;
+            int currwater=ht*width;
+            maxwater=Math.max(maxwater, currwater);
+            if(height.get(LP)<height.get(RP)){
+                LP++;
             }
-          }
-          return maxwater;
+            else{
+                RP--;
+            }
+        }
+        return maxwater;
     }
-    
     public static void main(String[] args) {
         ArrayList<Integer> height=new ArrayList<>();
         height.add(4);
@@ -30,5 +36,4 @@ public class ContainMostWater {
         
         System.out.println(storewater(height));
     }
-    
 }
