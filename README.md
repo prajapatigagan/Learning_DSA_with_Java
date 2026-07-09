@@ -21,3 +21,7 @@ Learning topics..
 8->saliding window & twopointer
 
 9->hashmap & hashSet
+
+10->ArrayList
+
+11->LinkedList
