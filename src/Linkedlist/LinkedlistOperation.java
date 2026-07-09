@@ -1,6 +1,7 @@
 package Linkedlist;
 
 public class LinkedlistOperation {
+    //first node ..
     public static class Node{
         int data;
         Node next;
@@ -13,6 +14,7 @@ public class LinkedlistOperation {
     public static Node tail;
     public static int size;
 
+//first add function..
     public void addFirst(int data){
         //step1:create a node
         Node newNode=new Node(data);
@@ -28,6 +30,8 @@ public class LinkedlistOperation {
         //step3 head=new Node
         head=newNode;
     }
+
+    //last add function..
     public void addLast(int data){
         //step1:create a node
         Node newNode=new Node(data);
@@ -44,7 +48,7 @@ public class LinkedlistOperation {
         tail=newNode;
     }
 
-
+// print function..
     public void printList() {
         Node temp = head;
         while (temp != null) {
@@ -90,6 +94,8 @@ public class LinkedlistOperation {
         size--;
         return val;
     }
+
+    //remove last..
     public int removelast(){
         if(size==0){
             System.out.println("ll is empty");
@@ -112,6 +118,39 @@ public class LinkedlistOperation {
         size--;
         return val;
     }
+
+    //Searching function(Iterative)
+    public int IterSearch(int key){  //O(n)
+        Node temp=head;
+        int i=0;
+        while(temp!=null){
+            if(temp.data==key){//find key
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        return -1;
+    }
+
+
+    //Searching..(Recursive)
+    public int helper(Node head,int key){
+        if(head==null){
+            return -1;
+        }
+        if(head.data==key){
+            return 0;
+        }
+        int idx=helper(head.next, key);
+        if(idx==-1){
+            return -1;
+        }
+        return idx+1;
+    }
+    public int RecuSearch(int key){
+        return helper(head, key);
+    }
     public static void main(String[] args) {
         LinkedlistOperation ll=new LinkedlistOperation();
         ll.printList();
@@ -128,13 +167,17 @@ public class LinkedlistOperation {
         ll.add(5, 9);
         ll.add(6, 10);
         ll.printList();
-        ll.removefirst();
-        ll.printList();
-        ll.removelast();
-        ll.printList();
-        
-        System.out.println("Size : "+ll.size);
-        
+        // ll.removefirst();
+        // ll.printList();
+        // ll.removelast();
+        // ll.printList();
+
+        // System.out.println("Size : "+ll.size);
+
+        System.out.println("Search key : "+ll.IterSearch(3));
+        System.out.println("Search key : "+ll.IterSearch(30));
+        System.out.println("Search key : "+ll.RecuSearch(3));
+        System.out.println("Search key : "+ll.RecuSearch(30));
 
     }
 }
