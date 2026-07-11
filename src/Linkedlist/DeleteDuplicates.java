@@ -4,13 +4,12 @@ public class DeleteDuplicates {
     public static class Node{
         int data;
         Node next;
-        private boolean val;
         public Node(int data){
             this.data=data;
             this.next=null;
         }
     }
-    public static Node head;
+    public Node head;
     public Node tail;
 
     public void addlast(int data){
@@ -33,7 +32,7 @@ public class DeleteDuplicates {
     public Node deleteFunction(Node head){
         Node curr=head;
         while(curr!=null&&curr.next!=null){
-            if(curr.val==curr.next.val){
+            if(curr.data==curr.next.data){
                 curr.next=curr.next.next;
             }
             else{
@@ -52,7 +51,7 @@ public class DeleteDuplicates {
         ll.addlast(2);
         ll.addlast(3);
         ll.printList();
-        System.out.println(ll.deleteFunction(head));
+        System.out.println(ll.deleteFunction(ll.head));
         ll.printList();
     }
 }
