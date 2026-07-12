@@ -76,7 +76,7 @@ public class MergedSort {
         if(head==null||head.next==null){
             return head;
         }
-        //find mid
+        //find mi
         Node mid=getMid(head);
 
         //left and right ms
@@ -98,8 +98,7 @@ public class MergedSort {
         System.out.print("Pehle: ");
         list.printList();  
         
-        MergedSort sorter = new MergedSort();
-   list.head = sorter.mergedSort(list.head);  
+        list.head = list.mergedSort(list.head);   
         
         System.out.print("Baad mein: ");
         list.printList(); 
