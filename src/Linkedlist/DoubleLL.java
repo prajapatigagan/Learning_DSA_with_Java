@@ -79,6 +79,24 @@ public class DoubleLL {
         size--;
         return val;
     }
+
+    //reverseDoublell
+    public void reverseDll(){
+        Node curr=head;
+        Node prev=null;
+        Node next;
+        while(curr!=null){
+            next=curr.next;
+            curr.next=prev;
+            curr.prev=next;
+            prev=curr;
+            curr=next;   
+        }
+        tail = head;
+        head=prev;
+        tail.next = null;
+
+    }
     //printlist
     public static void printlist(){
         Node temp=head;
@@ -99,6 +117,8 @@ public class DoubleLL {
         Dlist.addLast(5);
         Dlist.addLast(6);
         Dlist.printlist();
+        Dlist.reverseDll();
+        Dlist.printlist();
         System.out.println(size);
         Dlist.removeFirst();
         Dlist.printlist();
@@ -106,6 +126,7 @@ public class DoubleLL {
         Dlist.removelast();
         Dlist.printlist();
         System.out.println(size);
+        
     }
     
 }
