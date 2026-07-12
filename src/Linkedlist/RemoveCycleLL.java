@@ -56,16 +56,17 @@ public class RemoveCycleLL {
     }
     public static void main(String[] args) {
         Node head = new Node(1);
-        head.next=new Node(2);
+        Node temp=new Node(2);
+        head.next=temp;
         head.next.next=new Node(3);
-        head.next.next.next=head;
+        head.next.next.next=temp;
         System.out.println(Iscycle(head));
         removecycle(head);
         System.out.println(Iscycle(head));
-        Node temp = head;
-        while (temp != null) {
-            System.out.print(temp.data + "->");
-            temp = temp.next;
+        Node tempe = head;
+        while (tempe != null) {
+            System.out.print(tempe.data + "->");
+            tempe = tempe.next;
         }
         System.out.println("null");
     }
