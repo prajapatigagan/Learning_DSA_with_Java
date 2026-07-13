@@ -53,6 +53,5 @@ public class UsingLLStack {
             System.out.println(s.peek());
             s.pop();
         }
-    }
-    
+    }    
 }
