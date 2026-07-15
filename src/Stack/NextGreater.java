@@ -84,9 +84,6 @@ public class NextGreater {
           s.clear();  
             System.out.print(nxtsmaller2[i]+" ");
         }
-        System.out.println();
-        
-
-        
+        System.out.println();  
     }
 }
