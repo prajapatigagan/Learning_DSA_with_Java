@@ -1,42 +1,52 @@
 package Queue;
 
-public class CreateQueueInArr {
+public class CirculerQueueInArr {
     public static class Queue{
         static int arr[];
         static int size;
         static int rear;
+        static int front;
+
         public Queue(int size){
             arr=new int[size];
             this.size=size;
             rear=-1;
+            front=-1;
         }
 
         public static boolean  isEmpty(){
-            return rear==-1;
+            return rear==-1&&front==-1;
+        }
+        public static boolean isfull(){
+            return (rear+1)%size==front;
         }
         //add..
         public static void add(int data){
-            if(rear==size-1){
+            if(isfull()){
                 System.out.println("Queue is full");
                 return;
             }
-            else{
-                rear=rear+1;
-                arr[rear]=data;
+            if(front==-1){
+                front=0;
             }
+                rear=(rear+1)%size;
+                arr[rear]=data;
         }
+
         public static int remove(){
             if(isEmpty()){
                 System.out.println("full");
                 return -1;
             }
             else{
-                int front=arr[0];
-                for(int i=0; i<rear;i++){
-                    arr[i]=arr[i+1];
+                int result=arr[front];
+                if(rear==front){
+                    rear=front=-1;
                 }
-                rear=rear-1;
-                return front;
+                else{
+                    front=(front+1)%size;
+                } 
+                return result;
             }
         }
         public static int peek(){
@@ -44,7 +54,7 @@ public class CreateQueueInArr {
                 System.out.println("queue full");
                 return -1;
             }
-            return arr[0];
+            return arr[front];
         }
     }
     public static void main(String[] args) {
@@ -52,14 +62,10 @@ public class CreateQueueInArr {
         q.add(1);
         q.add(2);
         q.add(3);
-        System.out.println("remove"+q.remove());
-        q.add(4);
-        System.out.println("remove"+q.remove());
-        q.add(5);
         while(!q.isEmpty()){
             System.out.println(q.peek());
             q.remove();
         }
         System.out.println();
-    }
+    }  
 }
