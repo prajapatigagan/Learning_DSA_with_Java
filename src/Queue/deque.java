@@ -17,6 +17,5 @@ public class deque {
         System.out.println("First Element "+deque.getFirst());
         System.out.println("Last Element "+deque.getLast());
 
-
     }
 }
