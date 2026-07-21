@@ -1,0 +1,20 @@
+package GreedyAlgo;
+
+import java.util.*;
+
+public class MinAbsoluteDifference {
+    public static void main(String[] args) {
+        int A[]={1,2,3,4,5,6};
+        int B[]={6,5,4,3,2,1};
+
+        Arrays.sort(A);
+        Arrays.sort(B);
+
+        int mindiff=0;
+
+        for(int i=0; i<A.length;i++){
+            mindiff=Math.abs(A[i]-B[i]);
+        }
+        System.out.println("mindiff :"+mindiff);
+    }
+}
