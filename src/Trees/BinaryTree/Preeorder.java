@@ -31,3 +31,4 @@ public class Preeorder {
         System.out.println(root.data);
     }
 }
+
