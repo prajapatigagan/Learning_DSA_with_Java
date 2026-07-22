@@ -1,6 +1,6 @@
 package Trees.BinaryTree;
 
-public class Preeorder {
+public class PreorderTree {
     static class Node{
         int data;
         Node left;
