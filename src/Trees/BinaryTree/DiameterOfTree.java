@@ -29,7 +29,7 @@ public class DiameterOfTree {
         int LH=Height(root.left);
         int RH=Height(root.right);
 
-        int selfdiam=LH+RH+1;
+        int selfdiam=LH+RH;
 
         return Math.max(selfdiam,Math.max(Ldiam, Rdiam));
     }
