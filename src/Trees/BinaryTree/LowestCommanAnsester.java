@@ -36,6 +36,8 @@ public class LowestCommanAnsester {
         path.remove(path.size()-1);
         return false;
     }
+
+    //Approach 1...
     public static Node LCA(Node root,int n1,int n2){
         ArrayList<Node> path1=new ArrayList<>();
         ArrayList<Node> path2=new ArrayList<>();
@@ -50,10 +52,30 @@ public class LowestCommanAnsester {
                 break;
             }
         }
-
         //last equal node
         Node LCA=path1.get(i-1);
         return LCA;
+    }
+
+    //Approach 1...
+    public static Node LCA2(Node root,int n1,int n2){
+        if(root==null||root.data==n1||root.data==n2){
+            return root;
+        }
+
+        Node leftNca=LCA2(root.left, n1, n2);
+        Node rightNca=LCA2(root.right, n1, n2);
+
+        //left LCS=val  rightLCA=null
+
+        if(rightNca==null){
+            return leftNca;
+        }
+        if(leftNca==null){
+            return rightNca;
+        }
+
+        return root;
     }
     public static void main(String[] args) {
         Node A=new Node(1);
@@ -65,5 +87,6 @@ public class LowestCommanAnsester {
         A.right.right=new Node(7);
 
         System.out.println(LCA(A,6, 7).data);
+        System.out.println(LCA2(A, 4, 7).data);
     }
 }
